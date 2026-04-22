@@ -1,70 +1,199 @@
 ---
 layout: home
-title: 首页 Home
+title: Home
 permalink: /
 ---
 
-# 崔自强 / Ziqiang Cui
+# About Me
 
-> 欢迎来到我的个人学术主页。本站用于发布研究进展、学术成果与交流信息。
+I am **Ziqiang Cui** (崔自强), an Associate Professor at the
+[School of Electrical and Information Engineering](https://seea.tju.edu.cn/),
+Tianjin University, where I serve as an advisor for MSc and PhD students.
+My research bridges **state-of-the-art industrial process tomography** with
+real-world industrial measurement challenges. I am also an **Associate Editor
+of *IEEE Transactions on Instrumentation and Measurement* (TIM)**.
+
+Before joining Tianjin University, I was a Research Associate and Visiting
+Scholar at **The University of Manchester, UK** (2014–2016), and completed
+my postdoctoral training at **Nankai University** (2009–2011).
+
+My current research interests include:
+
+- **Industrial Process Tomography** — ECT, ERT, EMT and multi-modal imaging
+- **Multiphase Flow Measurement** — gas/liquid/solid three-phase flow characterization
+- **Electrical Impedance Tomography (EIT)** — biomedical and portable systems
+- **Non-Destructive Testing (NDT)** — electromagnetic defect imaging
+
+I am always looking for motivated **undergraduate, MSc and PhD students** to
+join our Electrical Tomography research group — feel free to
+[drop me an email](mailto:cuiziqiang@tju.edu.cn).
+
+---
+
+# 🔥 News
+
+<ul class="news-list">
+  <li><span class="news-date">2021.00</span> Named <em>Outstanding MSc Thesis Advisor</em> of Tianjin University.</li>
+  <li><span class="news-date">2020.00</span> Received the <strong>IEEE TIM Outstanding Reviewer Award</strong>; appointed Associate Editor of IEEE TIM.</li>
+  <li><span class="news-date">2017.01</span> NSFC project <em>"ECT/EMT dual-modality imaging for gas/liquid/solid three-phase flow characterization"</em> kicked off (2017–2020).</li>
+  <li><span class="news-date">2016.00</span> Awarded the <strong>Tianjin Science and Technology Progress Award (2<sup>nd</sup> Prize)</strong>.</li>
+  <li><span class="news-date">2015.08</span> Joined The University of Manchester as a Research Associate (until 2016.08).</li>
+  <li><span class="news-date">2014.00</span> Awarded the <strong>China Instrument and Control Society Science &amp; Technology Award (1<sup>st</sup> Prize)</strong>.</li>
+  <li><span class="news-date">2011.10</span> Joined Tianjin University as a faculty member.</li>
+</ul>
+
+---
+
+# 📝 Publications
+
+> **33+** peer-reviewed papers, **9** invention patents, and a co-authored
+> chapter in *Sensor Principles and Applications* (5<sup>th</sup> Edition).
+> For a complete and up-to-date list, please refer to
+> [Google Scholar](https://scholar.google.com/) / [ORCID](https://orcid.org/).
 >
-> Welcome to my personal academic homepage. This site hosts research updates,
-> publications and academic contact information.
+> Notation: `*` corresponding author &middot; `†` co-first author.
 
-## 个人简介 · Biography
+<div class="pub">
+  <div class="pub-thumb">IEEE TIM<br>2021</div>
+  <div class="pub-body">
+    <p><strong>ECT/EMT Dual-Modality Imaging for Gas/Liquid/Solid Three-Phase Flow Characterization.</strong></p>
+    <p class="authors"><b>Ziqiang Cui*</b>, et al.</p>
+    <p class="venue">IEEE Transactions on Instrumentation and Measurement, 2021.</p>
+    <p class="links">
+      <a href="#">PDF</a><a href="#">DOI</a><a href="#">BibTeX</a>
+    </p>
+  </div>
+</div>
 
-崔自强，**天津大学电气自动化与信息工程学院副教授**，硕士及博士生导师。主要致力于
-将国际领先的**工业过程成像技术**与工业检测领域亟待解决的问题相对接，研究方向涵盖
-工业过程层析成像（ECT / ERT / EMT）、多相流参数检测、生物电阻抗断层成像与无损检测。
+<div class="pub">
+  <div class="pub-thumb">Measurement<br>2021</div>
+  <div class="pub-body">
+    <p><strong>Sparse Reconstruction Algorithm for Electrical Capacitance Tomography.</strong></p>
+    <p class="authors">Author A, <b>Ziqiang Cui*</b>, Author C.</p>
+    <p class="venue">Measurement, 2021.</p>
+    <p class="links">
+      <a href="#">PDF</a><a href="#">DOI</a>
+    </p>
+  </div>
+</div>
 
-Ziqiang Cui is an Associate Professor at the School of Electrical and
-Information Engineering, Tianjin University. His research bridges advanced
-industrial process tomography with real-world industrial measurement
-challenges, covering electrical capacitance / resistance / magnetic induction
-tomography, multiphase flow measurement, electrical impedance tomography (EIT)
-and non-destructive testing (NDT).
+<div class="pub">
+  <div class="pub-thumb">Sensor Review<br>2015</div>
+  <div class="pub-body">
+    <p><strong>A Review on Image Reconstruction Algorithms for Electrical Capacitance / Resistance Tomography.</strong></p>
+    <p class="authors"><b>Ziqiang Cui</b>, et al.</p>
+    <p class="venue">Sensor Review, 2015.</p>
+    <p class="links">
+      <a href="#">PDF</a><a href="#">DOI</a>
+    </p>
+  </div>
+</div>
 
-- **职位 / Position:** 副教授 Associate Professor（硕士/博士生导师）
-- **单位 / Affiliation:** 天津大学 电气自动化与信息工程学院
-  (School of Electrical and Information Engineering, Tianjin University)
-- **研究方向 / Research Areas:** 工业过程成像、多相流参数检测、生物电阻抗断层成像、无损检测
-- **办公室 / Office:** 天津大学 26 教学楼 E 区
-- **邮箱 / Email:** `cuiziqiang@tju.edu.cn`
-- **电话 / Tel:** +86 139-2089-0976
-- **传真 / Fax:** +86-22-27405724
+<div class="pub">
+  <div class="pub-thumb">MST<br>2011</div>
+  <div class="pub-body">
+    <p><strong>A High-Performance Digital System for Electrical Capacitance Tomography.</strong></p>
+    <p class="authors"><b>Ziqiang Cui</b>, et al.</p>
+    <p class="venue">Measurement Science and Technology, 2011.</p>
+    <p class="links">
+      <a href="#">PDF</a><a href="#">DOI</a>
+    </p>
+  </div>
+</div>
 
-## 最新动态 · News
+<p style="text-align:right; margin-top: 8px;">
+  <a href="https://scholar.google.com/"><strong>Full list on Google Scholar →</strong></a>
+</p>
 
-- **2021** — 获评 *天津大学优秀硕士论文指导教师*。
-- **2020** — 荣获 *IEEE Transactions on Instrumentation and Measurement
-  (TIM) 优秀审稿人*，并担任该期刊 Associate Editor。
-- **2017–2020** — 主持国家自然科学基金项目
-  *"基于 ECT/EMT 双模成像的气/液/固三相流过程参数表征"*。
-- 持续招收对电学成像、多相流检测、机器学习与反问题求解感兴趣的本科生、
-  硕士生与博士生，详见 [招生信息](#招生信息--prospective-students)。
+### Selected Patents &amp; Books
 
-## 导航 · Navigation
+- **9** invention patents on electrical capacitance / magnetic induction
+  tomography and multiphase flow measurement devices.
+- Co-author, ***Sensor Principles and Applications (5th Edition)***
+  (传感器原理与应用, 第5版).
 
-- [研究方向 Research]({{ '/research/' | relative_url }})
-- [论文发表 Publications]({{ '/publications/' | relative_url }})
-- [教学工作 Teaching]({{ '/teaching/' | relative_url }})
-- [简历 CV]({{ '/cv/' | relative_url }})
+---
 
-## 招生信息 · Prospective Students
+# 🎖 Honors and Awards
 
-电学成像研究团队欢迎对研究方向感兴趣的**本科生、硕士生和博士生**加入，
-有意者请发送简历、成绩单及研究兴趣说明至 `cuiziqiang@tju.edu.cn`。
+- **2021** — *Outstanding MSc Thesis Advisor of Tianjin University*
+- **2020** — *IEEE TIM Outstanding Reviewer Award*
+- **2016** — *Tianjin Science and Technology Progress Award, Second Prize*
+- **2014** — *China Instrument and Control Society Science &amp; Technology
+  Award, First Prize*
+- **Peiyang Young Scholar — Junior Faculty Program**, Tianjin University
+  (北洋学者·青年骨干教师计划)
 
-The Electrical Tomography research group welcomes prospective undergraduate,
-MSc and PhD students. Please email your CV, transcripts and a short statement
-of research interests to `cuiziqiang@tju.edu.cn`.
+---
 
-## 联系方式 · Contact
+# 📖 Educations &amp; Experience
 
-- Email: `cuiziqiang@tju.edu.cn`
-- Tel: +86 139-2089-0976
-- 办公室 / Office: 天津大学 26 教学楼 E 区
-- 通讯地址 / Address: 天津市南开区卫津路 92 号 天津大学 电气自动化与信息工程学院
-- GitHub: [cuiziqiang](https://github.com/cuiziqiang)
-- 学院主页 / Faculty page:
-  [seea.tju.edu.cn/info/1117/2037.htm](https://seea.tju.edu.cn/info/1117/2037.htm)
+| Period | Position | Institution |
+| --- | --- | --- |
+| **2011.10 – Present** | Lecturer / **Associate Professor** (MSc &amp; PhD Advisor) | School of Electrical and Information Engineering, **Tianjin University** |
+| **2015.08 – 2016.08** | Research Associate | **The University of Manchester**, UK |
+| **2014.06 – 2015.06** | Visiting Scholar | **The University of Manchester**, UK |
+| **2009.10 – 2011.10** | Postdoctoral Researcher | **Nankai University** |
+
+Prior to 2009, Ph.D. studies (details available on the
+[TJU faculty page](https://seea.tju.edu.cn/info/1117/2037.htm) or on
+request).
+
+---
+
+# 💼 Selected Research Projects
+
+Principal investigator / co-investigator on **9+** national, provincial and
+industrial research projects. Selected:
+
+- **NSFC** — *ECT/EMT dual-modality imaging for gas/liquid/solid three-phase
+  flow characterization.* PI, 2017 – 2020.
+- **National Major Scientific Instrument Development Program** — Sub-project
+  PI / Co-I.
+- **Peiyang Young Scholar — Junior Faculty Program**, Tianjin University. PI.
+
+---
+
+# 💬 Invited Talks &amp; Academic Services
+
+- Invited talks at the **World Congress on Industrial Process Tomography
+  (WCIPT)** and domestic process-tomography workshops.
+- **Associate Editor**, *IEEE Transactions on Instrumentation and
+  Measurement* (IEEE TIM).
+- Reviewer for *IEEE TIM*, *IEEE Sensors Journal*, *Measurement*,
+  *Flow Measurement and Instrumentation*, and others.
+- Expert reviewer for the **MoE Academic Degrees Centre** (教育部学位中心
+  通讯评议专家).
+- Council Member, **Sensor Branch, China Instrument and Control Society**
+  (中国仪器仪表学会 传感器分会 理事).
+- Member, **IEEE** &amp; **IEEE Instrumentation &amp; Measurement Society**.
+
+---
+
+# 👨‍🏫 Teaching
+
+**Undergraduate courses**
+
+- *Fundamentals of Computer Control Technology* (计算机控制技术基础)
+- *Industrial Control Networks* (工业控制网络)
+- *Programmable Logic Controllers (PLC)* (可编程控制器)
+
+**Graduate courses**
+
+- *Academic Communication in English* (国际学术交流)
+
+Supervised multiple MSc and PhD students to completion; recognized as
+**Outstanding MSc Thesis Advisor of Tianjin University (2021)**.
+
+---
+
+# 📬 Contact
+
+<table>
+  <tr><th>Email</th><td><a href="mailto:cuiziqiang@tju.edu.cn">cuiziqiang@tju.edu.cn</a></td></tr>
+  <tr><th>Phone</th><td>+86 139-2089-0976</td></tr>
+  <tr><th>Fax</th><td>+86-22-27405724</td></tr>
+  <tr><th>Office</th><td>Room E, Building 26, Tianjin University</td></tr>
+  <tr><th>Address</th><td>No. 92 Weijin Road, Nankai District, Tianjin 300072, China</td></tr>
+  <tr><th>Faculty page</th><td><a href="https://seea.tju.edu.cn/info/1117/2037.htm">seea.tju.edu.cn/info/1117/2037.htm</a></td></tr>
+</table>

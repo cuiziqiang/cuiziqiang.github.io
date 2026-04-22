@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+  <div class="page-wrapper">
+    <aside class="sidebar">
+      {% include profile.html %}
+    </aside>
+
+    <main class="content">
+      {{ content }}
+
+      <footer class="site-footer">
+        <p>
+          &copy; {{ 'now' | date: "%Y" }} {{ site.author.name }} ·
+          <a href="https://seea.tju.edu.cn/info/1117/2037.htm">Faculty page</a> ·
+          Built with Jekyll, styled after
+          <a href="https://rayeren.github.io/acad-homepage.github.io/">acad-homepage</a>.
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

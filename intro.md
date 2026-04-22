@@ -1,13 +1,13 @@
 # 项目使用说明 · How to Use This Project
 
 本仓库 `cuiziqiang.github.io` 是基于 [Jekyll](https://jekyllrb.com/) 的
-[GitHub Pages](https://pages.github.com/) 个人学术主页模板，部署后访问地址为：
+[GitHub Pages](https://pages.github.com/) 个人学术主页，部署后访问地址：
 
 > **https://cuiziqiang.github.io**
 
-页面结构参考国内高校教师主页样式（如
-<https://seea.tju.edu.cn/info/1117/2037.htm>），
-默认包含：个人简介、研究方向、论文发表、教学工作、简历等模块。
+视觉风格参考 [acad-homepage](https://rayeren.github.io/acad-homepage.github.io/)：
+左侧为头像与联系信息的**固定侧栏**，右侧为带 emoji 小节标题的**单页长滚动**内容
+（🔥 News、📝 Publications、🎖 Honors、📖 Educations、💬 Services 等）。
 
 ---
 
@@ -15,114 +15,140 @@
 
 ```
 cuiziqiang.github.io/
-├── _config.yml                 # Jekyll 站点配置
-├── index.md                    # 首页（个人简介 / Home）
-├── research.md                 # 研究方向 Research
-├── publications.md             # 论文发表 Publications
-├── teaching.md                 # 教学工作 Teaching
-├── cv.md                       # 简历 CV
+├── _config.yml                 # 站点配置（姓名、邮箱、侧栏链接等）
+├── index.md                    # 单页学术主页（所有内容都在这里）
+├── _layouts/
+│   ├── default.html            # 基础布局：侧栏 + 正文
+│   └── home.html               # 首页布局（继承 default）
+├── _includes/
+│   └── profile.html            # 侧栏：头像 + 姓名 + 联系方式 + 社交链接
+├── assets/
+│   ├── css/
+│   │   └── main.scss           # 主样式（acad-homepage 风格）
+│   └── img/
+│       ├── avatar.jpg          # 头像（需自行上传）
+│       └── favicon.png         # 站点 favicon（可选）
 ├── Gemfile                     # 本地预览依赖
-├── intro.md                    # 本说明文件
+├── intro.md                    # 本说明文件（不会发布到线上）
 ├── README.md                   # 项目说明
 └── .github/workflows/
-    └── jekyll-gh-pages.yml     # 自动构建与部署到 GitHub Pages
+    └── jekyll-gh-pages.yml     # 自动构建并部署到 GitHub Pages
 ```
-
-所有页面使用 Markdown 编写，文件头部的 YAML `---` 区域称为 **front matter**，
-用于声明页面标题、布局和访问路径（`permalink`），一般无需改动。
 
 ## 2. 快速上手 · Quick Start
 
-### 2.1 直接在 GitHub 上编辑（推荐新手）
+### 2.1 在线编辑（推荐）
 
-1. 打开对应的 `.md` 文件（例如 `index.md`）。
-2. 点击右上角 ✏️ 铅笔图标进入编辑模式。
-3. 修改内容后点击 **Commit changes** 提交。
-4. 提交到 `main` 分支会触发 `.github/workflows/jekyll-gh-pages.yml`
-   工作流，约 1–2 分钟后新的页面即可在
-   <https://cuiziqiang.github.io> 访问。
+1. 直接在 GitHub 上打开 `index.md` 修改对应小节；`_config.yml`
+   用于维护姓名、邮箱、侧栏链接等站点级别的元数据。
+2. 提交后自动触发 Actions 构建，1–2 分钟后刷新
+   <https://cuiziqiang.github.io> 即可看到新页面。
 
-### 2.2 本地预览 · Local Preview
-
-需要 Ruby ≥ 3.1 与 Bundler。
+### 2.2 本地预览
 
 ```bash
-# 安装依赖
 bundle install
-
-# 启动本地服务，默认地址 http://127.0.0.1:4000
 bundle exec jekyll serve --livereload
+# 浏览器访问 http://127.0.0.1:4000
 ```
 
-如在 Windows 上首次运行遇到 `tzinfo` 报错，`Gemfile` 已包含
-`tzinfo-data` 与 `wdm`，执行一次 `bundle install` 即可。
+## 3. 如何修改内容 · Filling in Your Content
 
-## 3. 如何填充内容 · Filling in Your Content
+### 3.1 姓名 / 邮箱 / 侧栏链接
 
-建议按以下顺序逐个文件修改，每个文件内的占位文字（中文“在此填写…”与英文
-*italic hints*）都可直接替换为您自己的信息。
-
-| 文件 File | 要替换的内容 What to edit |
-| --- | --- |
-| `_config.yml` | 站点标题、描述、邮箱、URL |
-| `index.md` | 姓名、职位、单位、研究方向概述、最新动态 |
-| `research.md` | 研究兴趣分组、在研与已结题项目 |
-| `publications.md` | 按年份的期刊/会议论文、专利、学术服务 |
-| `teaching.md` | 本科/研究生课程、指导学生名单 |
-| `cv.md` | 教育背景、工作经历、获奖情况 |
-
-### 添加头像 · Adding a Profile Photo
-
-1. 将图片放到 `assets/img/avatar.jpg`（目录不存在时自己创建）。
-2. 在 `index.md` 中插入：
-   ```markdown
-   ![avatar]({{ '/assets/img/avatar.jpg' | relative_url }}){: width="180" }
-   ```
-
-### 添加简历 PDF · Adding a CV PDF
-
-将 PDF 放到 `assets/cv.pdf`，`cv.md` 中已准备好下载链接。
-
-### 新增页面 · Creating a New Page
-
-在仓库根目录新建 `yourpage.md`，开头加上：
+集中维护在 **`_config.yml`** 的 `author` 字段：
 
 ```yaml
----
-layout: page
-title: 页面标题 Your Title
-permalink: /yourpage/
----
+author:
+  name: "Ziqiang Cui"
+  name_cn: "崔自强"
+  avatar: "/assets/img/avatar.jpg"
+  email: "cuiziqiang@tju.edu.cn"
+  phone: "+86 139-2089-0976"
+  office: "Room E, Building 26, Tianjin University"
+  links:
+    - { label: "Google Scholar", icon: "fas fa-graduation-cap", url: "https://scholar.google.com/" }
+    - { label: "GitHub",         icon: "fab fa-github",          url: "https://github.com/cuiziqiang" }
+    # 继续添加 ORCID / DBLP / Twitter / ResearchGate 等
 ```
 
-若希望出现在导航栏，再将文件名加入 `_config.yml` 的 `header_pages` 列表。
+图标使用 [Font Awesome 6](https://fontawesome.com/search) 类名即可。
+
+### 3.2 正文（News / Publications / Awards / …）
+
+全部写在 **`index.md`**。每个小节以
+`# 🔥 News` / `# 📝 Publications` 之类的 H1 标题分隔：
+
+```markdown
+# 🔥 News
+<ul class="news-list">
+  <li><span class="news-date">2026.04</span> 新的学术动态……</li>
+</ul>
+
+# 📝 Publications
+<div class="pub">
+  <div class="pub-thumb">IEEE TIM<br>2025</div>
+  <div class="pub-body">
+    <p><strong>论文标题 Paper Title.</strong></p>
+    <p class="authors"><b>Ziqiang Cui*</b>, Co-author.</p>
+    <p class="venue">Journal Name, 2025.</p>
+    <p class="links"><a href="…">PDF</a><a href="…">DOI</a></p>
+  </div>
+</div>
+```
+
+样式 class `news-list` / `pub` / `pub-thumb` / `pub-body` 等均已在
+`assets/css/main.scss` 中定义。
+
+### 3.3 头像
+
+把 1:1 比例的头像图片保存为
+**`assets/img/avatar.jpg`**（推荐 ≥ 512×512）。
+如果文件暂缺，侧栏会自动退回显示 Gravatar 占位图。
+
+### 3.4 简历 PDF（可选）
+
+将 PDF 放至 `assets/cv.pdf`，然后在 `index.md` 的合适位置添加下载链接：
+
+```markdown
+📄 [Download CV (PDF)]({{ '/assets/cv.pdf' | relative_url }})
+```
 
 ## 4. 部署机制 · How Deployment Works
 
-- 推送到 `main` 分支后，GitHub Actions 会运行
-  `.github/workflows/jekyll-gh-pages.yml`。
-- 该工作流使用 `actions/jekyll-build-pages` 构建站点，再通过
-  `actions/deploy-pages` 部署到 GitHub Pages 环境。
-- 首次启用时，请在仓库的 **Settings → Pages → Build and deployment →
+- 推送到 `main` 分支后，`.github/workflows/jekyll-gh-pages.yml`
+  会使用 `actions/jekyll-build-pages` 构建站点，
+  再通过 `actions/deploy-pages` 发布。
+- 首次启用时，请到仓库 **Settings → Pages → Build and deployment →
   Source** 选择 **GitHub Actions**。
-- 部署成功后，可在 Actions 面板查看 `page_url` 输出。
+- 构建失败时，在 Actions 面板查看日志；常见问题是 Markdown 中未闭合的
+  HTML 标签或缩进导致 Liquid 解析错误。
 
 ## 5. 常见问题 · FAQ
 
-**Q: 修改了文件，网站却没有更新？**
-A: 打开 Actions 面板查看最近一次工作流是否失败；失败时点击查看日志。
-也可清理浏览器缓存或用隐身模式访问。
+**Q: 为什么不用 acad-homepage 的原仓库 fork？**
+A: 原仓库基于 Minimal Mistakes，依赖较多且定制成本高。本项目用一份精简
+的自定义布局 + SCSS 就能复现核心视觉（侧栏 + emoji 分节 + 论文卡片）。
+如果希望用完整版，可以直接 fork
+<https://github.com/RayeRen/acad-homepage.github.io> 并把
+`_config.yml`、`_pages/about.md` 替换成本仓库的同名文件。
 
-**Q: 可以换主题吗？**
-A: 可以。将 `_config.yml` 中 `theme: minima` 改为任意
-[GitHub Pages 支持的主题](https://pages.github.com/themes/)，
-或改用 `remote_theme:` 使用远程主题。
+**Q: 样式太深/太浅，想改配色？**
+A: 在 `assets/css/main.scss` 的 `:root` 区域修改
+`--color-accent` / `--color-text` / `--color-bg` 等 CSS 变量即可。
 
-**Q: 如何启用评论 / 统计 / 数学公式？**
-A: 可在 `_includes/` 中加入自定义片段（如 giscus、百度统计、MathJax），
-并在页面或默认布局中引用。Minima 主题支持 `_includes/head.html` 覆盖。
+**Q: 如何加 Google Scholar 引用数徽章？**
+A: 在 `index.md` 相应位置插入 acad-homepage 同款图片徽章：
+```html
+<img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FRayeRen%2Facad-homepage.github.io%40master%2Fgoogle_scholar_crawler%2Fresults%2Fgs_data_shieldsio.json&labelColor=f6f6f6&color=9cf&style=flat&label=citations" />
+```
+把 URL 换成自己主页的爬取结果即可。
+
+**Q: 如何启用评论 / 数学公式 / 统计？**
+A: 在 `_layouts/default.html` 的 `<head>` 或 `</body>` 之前引入对应脚本
+（MathJax、giscus、百度统计等），无需动主题。
 
 ## 6. 许可 · License
 
-站点文字内容版权归作者所有；代码部分（模板结构）可自由复用。
-如需更严格声明，请在仓库根目录添加 `LICENSE` 文件。
+文字内容版权归作者所有；模板代码可自由复用。如需添加正式协议，
+在仓库根目录新增 `LICENSE` 文件即可。

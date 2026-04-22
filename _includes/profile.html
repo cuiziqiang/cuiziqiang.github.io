@@ -1,0 +1,33 @@
+<div class="profile">
+  <img class="profile-avatar"
+       src="{{ site.author.avatar | relative_url }}"
+       alt="{{ site.author.name }}"
+       onerror="this.onerror=null;this.src='https://www.gravatar.com/avatar/?d=mp&s=512';">
+
+  <h1 class="profile-name">{{ site.author.name }}</h1>
+  <p class="profile-name-cn">{{ site.author.name_cn }}</p>
+
+  <p class="profile-bio">{{ site.author.bio }}</p>
+  <p class="profile-affiliation">
+    {{ site.author.affiliation }}<br>
+    <span class="cn">{{ site.author.affiliation_cn }}</span>
+  </p>
+
+  <ul class="profile-meta">
+    <li><i class="fas fa-map-marker-alt"></i> {{ site.author.office }}</li>
+    <li><i class="fas fa-envelope"></i>
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+    </li>
+    <li><i class="fas fa-phone"></i> {{ site.author.phone }}</li>
+  </ul>
+
+  <ul class="profile-links">
+    {% for link in site.author.links %}
+      <li>
+        <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.label }}">
+          <i class="{{ link.icon }}"></i> <span>{{ link.label }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
