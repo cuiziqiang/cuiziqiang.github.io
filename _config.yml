@@ -1,0 +1,48 @@
+title: 崔子强 | Ziqiang Cui
+subtitle: 个人学术主页 · Personal Academic Homepage
+author: 崔子强 Ziqiang Cui
+email: cuiziqiang@example.com
+description: >-
+  崔子强的个人学术主页，用于展示研究方向、学术成果、教学工作与学术交流信息。
+  Personal academic homepage of Ziqiang Cui — research interests, publications,
+  teaching and contact information.
+lang: zh-CN
+url: "https://cuiziqiang.github.io"
+baseurl: ""
+
+theme: minima
+minima:
+  skin: classic
+  nav_pages:
+    - index.md
+    - research.md
+    - publications.md
+    - teaching.md
+    - cv.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+header_pages:
+  - index.md
+  - research.md
+  - publications.md
+  - teaching.md
+  - cv.md
+
+exclude:
+  - README.md
+  - intro.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
