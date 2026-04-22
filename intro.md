@@ -148,7 +148,71 @@ A: 在 `index.md` 相应位置插入 acad-homepage 同款图片徽章：
 A: 在 `_layouts/default.html` 的 `<head>` 或 `</body>` 之前引入对应脚本
 （MathJax、giscus、百度统计等），无需动主题。
 
-## 6. 许可 · License
+## 6. 自定义域名 · Custom Domain
+
+本站已绑定自定义域名 **`tjuet.group`**（TJU Electrical Tomography group）。
+
+### 6.1 仓库侧
+- 根目录已存在 `CNAME` 文件，内容为 `tjuet.group`。
+- `_config.yml` 中 `url: "https://tjuet.group"`，用于生成绝对链接 / sitemap / feed。
+
+### 6.2 DNS 解析（在域名服务商处配置）
+
+`tjuet.group` 是 apex（主域）域名，需添加 **4 条 A 记录** 指向 GitHub Pages 的 IP：
+
+```
+类型: A   主机: @   值: 185.199.108.153
+类型: A   主机: @   值: 185.199.109.153
+类型: A   主机: @   值: 185.199.110.153
+类型: A   主机: @   值: 185.199.111.153
+```
+
+若 DNS 服务商支持 IPv6，可再加 4 条 AAAA：
+
+```
+2606:50c0:8000::153
+2606:50c0:8001::153
+2606:50c0:8002::153
+2606:50c0:8003::153
+```
+
+如果希望 `www.tjuet.group` 也能访问，再加一条 CNAME：
+
+```
+类型: CNAME   主机: www   值: cuiziqiang.github.io.
+```
+
+### 6.3 GitHub 仓库 Settings
+
+1. **Settings → Pages → Custom domain**：填写 `tjuet.group`，保存。
+   （GitHub 会自动校验 `CNAME` 文件与 DNS 是否一致。）
+2. 等 DNS 生效后，勾选 **Enforce HTTPS**，GitHub 会自动申请
+   Let's Encrypt 证书（首次签发约需几分钟至几小时）。
+
+### 6.4 验证
+
+```bash
+# 应返回 GitHub 的 4 个 IP
+dig +short tjuet.group
+
+# 首次访问若报 "DNS_PROBE_FINISHED_NXDOMAIN" 是 DNS 未生效，
+# 报 "SSL certificate problem" 是 HTTPS 证书还在签发，等待即可。
+curl -I https://tjuet.group
+```
+
+### 6.5 若以后要换域名
+
+1. 修改 `CNAME` 文件内容为新域名。
+2. 修改 `_config.yml` 的 `url`。
+3. 在新域名服务商处配置上述相同的 DNS 记录。
+4. 在 GitHub Settings → Pages 中更新 Custom domain。
+
+> 国内访问提示：GitHub Pages 在海外，必要时可以在 Cloudflare 上为
+> `tjuet.group` 开 CDN 代理以改善国内访问速度（需把 DNS 托管到 Cloudflare）。
+
+---
+
+## 7. 许可 · License
 
 文字内容版权归作者所有；模板代码可自由复用。如需添加正式协议，
 在仓库根目录新增 `LICENSE` 文件即可。
