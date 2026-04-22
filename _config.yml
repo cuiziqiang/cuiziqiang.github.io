@@ -1,11 +1,14 @@
-title: 崔子强 | Ziqiang Cui
-subtitle: 个人学术主页 · Personal Academic Homepage
-author: 崔子强 Ziqiang Cui
-email: cuiziqiang@example.com
+title: 崔自强 | Ziqiang Cui
+subtitle: 天津大学电气自动化与信息工程学院 副教授
+author: 崔自强 Ziqiang Cui
+email: cuiziqiang@tju.edu.cn
 description: >-
-  崔子强的个人学术主页，用于展示研究方向、学术成果、教学工作与学术交流信息。
-  Personal academic homepage of Ziqiang Cui — research interests, publications,
-  teaching and contact information.
+  崔自强，天津大学电气自动化与信息工程学院副教授、硕士/博士生导师。
+  主要从事工业过程成像、多相流参数检测、生物电阻抗断层成像与无损检测等方向的研究。
+  Ziqiang Cui, Associate Professor at the School of Electrical and Information
+  Engineering, Tianjin University. Research focuses on industrial process
+  tomography, multiphase flow measurement, electrical impedance tomography and
+  non-destructive testing.
 lang: zh-CN
 url: "https://cuiziqiang.github.io"
 baseurl: ""
