@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 
-# About Me
+# About Me {#about-me}
 
 I am **Ziqiang Cui** (崔自强), an Associate Professor at the
 [School of Electrical and Information Engineering](https://seea.tju.edu.cn/),
@@ -30,7 +30,7 @@ join our Electrical Tomography research group — feel free to
 
 ---
 
-# 🔥 News
+# 🔥 News {#news}
 
 <ul class="news-list">
   <li><span class="news-date">2026.03</span> New paper accepted in <em>IEEE Sensors Journal</em> — <a href="https://doi.org/10.1109/JSEN.2025.3648883"><em>Hardware Optimization Methods for High-Speed Electrical Impedance Tomography System</em></a>.</li>
@@ -49,7 +49,7 @@ join our Electrical Tomography research group — feel free to
 
 ---
 
-# 📝 Publications
+# 📝 Publications {#publications}
 
 > **90+** peer-reviewed works to date (source:
 > [ORCID 0000-0003-0498-9955](https://orcid.org/0000-0003-0498-9955)),
@@ -332,7 +332,7 @@ join our Electrical Tomography research group — feel free to
 
 ---
 
-# 🎖 Honors and Awards
+# 🎖 Honors and Awards {#honors-and-awards}
 
 - **2021** — *Outstanding MSc Thesis Advisor of Tianjin University*
 - **2020** — *IEEE TIM Outstanding Reviewer Award*
@@ -344,7 +344,7 @@ join our Electrical Tomography research group — feel free to
 
 ---
 
-# 📖 Educations &amp; Experience
+# 📖 Educations &amp; Experience {#educations-experience}
 
 | Period | Position | Institution |
 | --- | --- | --- |
@@ -359,7 +359,7 @@ request).
 
 ---
 
-# 💼 Selected Research Projects
+# 💼 Selected Research Projects {#selected-research-projects}
 
 Principal investigator / co-investigator on **9+** national, provincial and
 industrial research projects. Selected:
@@ -372,7 +372,7 @@ industrial research projects. Selected:
 
 ---
 
-# 💬 Invited Talks &amp; Academic Services
+# 💬 Invited Talks &amp; Academic Services {#invited-talks-academic-services}
 
 - Invited talks at the **World Congress on Industrial Process Tomography
   (WCIPT)** and domestic process-tomography workshops.
@@ -388,7 +388,7 @@ industrial research projects. Selected:
 
 ---
 
-# 👨‍🏫 Teaching
+# 👨‍🏫 Teaching {#teaching}
 
 **Undergraduate courses**
 
@@ -405,7 +405,7 @@ Supervised multiple MSc and PhD students to completion; recognized as
 
 ---
 
-# 📬 Contact
+# 📬 Contact {#contact}
 
 <table>
   <tr><th>Email</th><td><a href="mailto:cuiziqiang@tju.edu.cn">cuiziqiang@tju.edu.cn</a></td></tr>

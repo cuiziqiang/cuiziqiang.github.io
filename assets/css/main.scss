@@ -35,6 +35,8 @@ html, body {
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;   /* offset fixed nav for anchor jumps */
 }
 
 a {
@@ -60,11 +62,71 @@ hr {
   margin: 2.4rem 0;
 }
 
+/* ---------- Top navigation ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: saturate(1.2) blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+.site-nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.site-nav-brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: .2px;
+  white-space: nowrap;
+}
+.site-nav-brand:hover { color: var(--color-accent); text-decoration: none; }
+.site-nav-brand .cn {
+  color: var(--color-muted);
+  font-weight: 500;
+  margin-left: 4px;
+}
+.site-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 auto;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.site-nav-links a {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: .9rem;
+  color: var(--color-text);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .15s ease, color .15s ease;
+}
+.site-nav-links a:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .site-nav-inner { padding: 10px 16px; gap: 10px; }
+  .site-nav-links { margin-left: 0; width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+  .site-nav-links a { padding: 5px 10px; font-size: .85rem; }
+}
+
 /* ---------- Layout ---------- */
 .page-wrapper {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 48px 28px;
+  padding: 40px 28px 48px;
   display: grid;
   grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
   gap: 56px;
@@ -73,7 +135,7 @@ hr {
 
 .sidebar {
   position: sticky;
-  top: 32px;
+  top: 88px;                  /* clear the fixed top nav */
 }
 
 .content {
