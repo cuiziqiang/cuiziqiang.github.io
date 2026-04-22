@@ -6,4 +6,4 @@
 
 具体内容参考 https://seea.tju.edu.cn/info/1117/2037.htm
 
-模板样例：https://rayeren.github.io/acad-homepage.github.io/
+模板样例：https://rayeren.github.io/
