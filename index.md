@@ -409,7 +409,6 @@ Supervised multiple MSc and PhD students to completion; recognized as
 
 <table>
   <tr><th>Email</th><td><a href="mailto:cuiziqiang@tju.edu.cn">cuiziqiang@tju.edu.cn</a></td></tr>
-  <tr><th>Fax</th><td>+86-22-27405724</td></tr>
   <tr><th>Office</th><td>Room E, Building 26, Tianjin University</td></tr>
   <tr><th>Address</th><td>No. 92 Weijin Road, Nankai District, Tianjin 300072, China</td></tr>
   <tr><th>Faculty page</th><td><a href="https://seea.tju.edu.cn/info/1117/2037.htm">seea.tju.edu.cn/info/1117/2037.htm</a></td></tr>
