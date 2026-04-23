@@ -64,7 +64,6 @@ author:
   name_cn: "崔自强"
   avatar: "/assets/img/avatar.jpg"
   email: "cuiziqiang@tju.edu.cn"
-  phone: "+86 139-2089-0976"
   office: "Room E, Building 26, Tianjin University"
   links:
     - { label: "Google Scholar", icon: "fas fa-graduation-cap", url: "https://scholar.google.com/" }
